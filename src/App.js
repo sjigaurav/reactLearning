@@ -1,6 +1,6 @@
 import React from 'react';
 //import logo from './logo.svg';
-import image from './Image.jpeg'
+import image from './myLogo.jpg'
 import './App.css';
 import Greet from './components/Greet'
 import Welcome from './components/Welcome'
@@ -28,15 +28,38 @@ import {
 import About from './components/About';
 import Users from './components/Users';
 import Home from './components/Home';
+import LifeCycleA from './components/LifeCycleA';
+import FragmentDemo from './components/FragmentDemo';
+import PortalDemo from './components/PortalDemo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={image} className="App-logo" alt="logo" />
-        <p>
-          This is my first React app
-        </p>
+      <Router>
+        <header className="App-header">
+          <img src={image} className="App-logo" alt="logo" />
+          <div className="header-right">
+            <div className="header-right">
+              <a href="/">Home</a>
+              <a href="/users" target="_blank">Users</a>
+              <a href="/about" target="_blank">About</a>
+            </div>
+          </div>
+        </header>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+     
+      <ControlledCarousel/>
       <Greet name="Gaurav" heroName="SuperHero">
         <p>This is childern of greet</p>
       </Greet>
@@ -56,41 +79,12 @@ function App() {
       {/* <h1 className='error'>Error</h1> */}
       {/* <h1 className={style.success}>Success</h1> */}
       <Form/>
-      <ControlledCarousel/>
-      </header>
+      
 
-      <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about" target="_blank">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-    </div>
+    <LifeCycleA/>
+    <FragmentDemo/>
+    <PortalDemo/>
+  </div>
 
    
   );
