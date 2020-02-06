@@ -1,8 +1,13 @@
 import React from 'react'
+import ControlledCarousel from './ControlledCarousel';
+import image from '../Carausal3.jpg'
 
 function Users() {
     return (
-        <h2>Users...</h2>
+        <React.Fragment>
+            <ControlledCarousel imagePath={image}/>
+            <h2>Users...</h2>
+        </React.Fragment>
     )
 }
 

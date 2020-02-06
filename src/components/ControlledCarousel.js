@@ -1,16 +1,16 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import image from '../carausalimage.png'
 
-function ControlledCarousel() {
+
+function ControlledCarousel(props) {
   
     return (
         <Carousel>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={image}
+            src={props.imagePath}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -21,7 +21,7 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={image}
+            src={props.imagePath}
             alt="Third slide"
           />
       
@@ -33,7 +33,7 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={image}
+            src={props.imagePath}
             alt="Third slide"
           />
       

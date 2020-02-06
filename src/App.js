@@ -18,7 +18,6 @@ import Inline from './components/Inline';
 import './appStyle.css'
 import style from './appStyle.module.css'
 import Form from './components/Form';
-import ControlledCarousel from './components/ControlledCarousel';
 import {
   BrowserRouter as Router,
   Switch,
@@ -59,7 +58,6 @@ function App() {
         </Switch>
       </Router>
      
-      <ControlledCarousel/>
       <Greet name="Gaurav" heroName="SuperHero">
         <p>This is childern of greet</p>
       </Greet>
