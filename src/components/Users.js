@@ -5,7 +5,7 @@ import image from '../Carausal3.jpg'
 function Users() {
     return (
         <React.Fragment>
-            <ControlledCarousel imagePath={image}/>
+            <ControlledCarousel imagePath={image} imagePathSecond={image}/>
             <h2>Users...</h2>
         </React.Fragment>
     )

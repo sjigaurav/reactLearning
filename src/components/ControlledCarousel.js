@@ -21,8 +21,8 @@ function ControlledCarousel(props) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={props.imagePath}
-            alt="Third slide"
+            src={props.imagePathSecond}
+            alt="Second slide"
           />
       
           <Carousel.Caption>
